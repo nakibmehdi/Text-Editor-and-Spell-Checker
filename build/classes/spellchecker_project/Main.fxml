@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.fxmisc.richtext.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="504.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spellchecker_project.MainController">
+  <children>
+    <BorderPane prefHeight="504.0" prefWidth="634.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <bottom>
+        <AnchorPane focusTraversable="true" opacity="1.0" prefHeight="50.999900000002526" prefWidth="634.0" visible="true">
+          <children>
+            <Button fx:id="btnCheck" layoutX="104.0" layoutY="5.0" mnemonicParsing="false" onAction="#onbtnCheckClicked" prefHeight="36.999900000002526" prefWidth="35.0" text="..." />
+            <Separator layoutX="166.0" layoutY="6.0" orientation="VERTICAL" prefHeight="37.0" />
+            <Text layoutX="188.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Character :" />
+            <Label fx:id="txtNumberCharacter" layoutX="253.0" layoutY="19.0" text="0" />
+            <Separator layoutX="290.0" layoutY="6.0" orientation="VERTICAL" prefHeight="37.0" />
+            <Text layoutX="339.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2016 : NAKIB &amp; AID" />
+          </children>
+        </AnchorPane>
+      </bottom>
+      <left>
+        <AnchorPane id="" prefHeight="480.0" prefWidth="66.0" style="-fx-background-color:#76797A;&#10;&#10;" />
+      </left>
+      <right>
+        <AnchorPane id="" prefHeight="480.0" prefWidth="66.0" style="-fx-background-color:#76797A;&#10;&#10;" />
+      </right>
+      <top>
+        <MenuBar>
+          <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onNewFileClicked" text="New File">
+                  <accelerator>
+                    <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                  </accelerator>
+                </MenuItem>
+                <MenuItem mnemonicParsing="false" onAction="#onOpenFileClicked" text="Open File">
+                  <accelerator>
+                    <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                  </accelerator>
+                </MenuItem>
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem mnemonicParsing="false" text="Save">
+                  <accelerator>
+                    <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                  </accelerator>
+                </MenuItem>
+                <MenuItem mnemonicParsing="false" onAction="#onSaveAsClicked" text="Save as">
+                  <accelerator>
+                    <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                  </accelerator>
+                </MenuItem>
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem mnemonicParsing="false" onAction="#onCloseClicked" text="Close">
+                  <accelerator>
+                    <KeyCodeCombination alt="DOWN" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                  </accelerator>
+                </MenuItem>
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Clear" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" text="About" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+      </top>
+         <center>
+            <InlineCssTextArea fx:id="txtText" BorderPane.alignment="CENTER" />
+         </center>
+    </BorderPane>
+  </children>
+</AnchorPane>
